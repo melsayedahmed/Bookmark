@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="img/bookmark.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Bree+Serif&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="position-relative py-5">
+      <div class="container position-relative">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
+          <h1 class="head py-2 position-relative">Bookmarker</h1>
+          <div
+            class="main w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+          >
+            <h2>
+              <i class="fa-solid fa-bookmark"></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div
+              class="site-name w-100 d-flex flex-column justify-content-center"
+            >
+              <label for="bookmarkName" class="pb-2 fw-semibold">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name
+              </label>
+              <input
+                type="text"
+                placeholder="Bookmark Name"
+                class="form-control"
+                id="bookMarkName"
+              />
+            </div>
+            <div
+              class="site-URL w-100 d-flex flex-column justify-content-center"
+            >
+              <label for="bookMarkURL" class="pb-2 fw-semibold">
+                <i class="fa-solid fa-link pe-2"></i>Site URL
+              </label>
+              <input
+                type="text"
+                placeholder="Website URL"
+                class="form-control"
+                id="bookMarkURL"
+              />
+            </div>
+            <button class="btn btn-sub px-5" id="submitBtn">Submit</button>
+          </div>
+          <div class="search w-100 d-flex justify-content-center mt-4 mb-2">
+            <input
+              id="search"
+              type="text"
+              class="form-control w-50"
+              placeholder="Search By Website Name..."
+            />
+          </div>
+          <table class="table mt-4 text-center bg-light">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Website URL</th>
+                <th>Visit</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div
+        class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none"
+      >
+        <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+          <header
+            class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+          >
+            <div class="circles d-flex">
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+            </div>
+            <button class="btn border-0" id="closeBtn">
+              <i class="fa-solid fa-xmark close fs-3"></i>
+            </button>
+          </header>
+          <p class="m-0 pb-2">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules list-unstyled m-0">
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+              valid one
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div
+        class="box-information position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none"
+      >
+        <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+          <header
+            class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+          >
+            <div class="circles d-flex">
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+            </div>
+            <button class="btn border-0" id="BoxExit">
+              <i class="fa-solid fa-xmark close fs-3"></i>
+            </button>
+          </header>
+          <p class="m-0 pb-2">Sorry, you have not updated your data yet.</p>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
